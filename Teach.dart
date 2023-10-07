@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class TeachPage extends StatelessWidget {
@@ -15,7 +14,7 @@ class TeachPage extends StatelessWidget {
           children: <Widget>[
             // Image at the beginning
             Image.asset(
-              'assets/teach_image.png', // Replace with image path
+              'assets/teach_image.png', // Replace with your image path
               width: double.infinity,
               fit: BoxFit.cover,
             ),
@@ -73,6 +72,48 @@ class TeachPage extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.class_),
+            label: 'Classes',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.book),
+            label: 'Learn',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            label: 'Teach',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+          ),
+        ],
+        currentIndex: 2, // Index for the "Teach" page
+        selectedItemColor: Colors.green, // Change to your desired color
+        onTap: (int index) {
+          // Implement navigation logic based on the selected tab index
+          switch (index) {
+            case 0:
+              // Navigate to the "Classes" page
+              break;
+            case 1:
+              // Navigate to the "Learn" page
+              break;
+            case 2:
+              // Already on the "Teach" page
+              break;
+            case 3:
+              // Navigate to the "Profile" page
+              break;
+          }
+        },
+      ),
     );
   }
 }
+
+
+           
